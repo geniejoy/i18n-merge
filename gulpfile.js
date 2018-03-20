@@ -110,7 +110,8 @@ gulp.task( "i18n-update:init", function ()
             }
             ,
             parserOptions: {
-                xmlMode: true
+                xmlMode: true,
+                decodeEntities: false
             }
         } ) )
 } );
@@ -150,7 +151,8 @@ gulp.task( "i18n-update:merge", [ "i18n-update:init" ], function ()
             }
             ,
             parserOptions: {
-                xmlMode: true
+                xmlMode: true,
+                decodeEntities: false
             }
         } ) )
         .pipe( modifyFile( function ( content )
